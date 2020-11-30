@@ -7,7 +7,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print("봇이 정상적으로 실행되었습니다.")
-    game = discord.Game('출퇴근')
+    game = discord.Game('!도움')
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
