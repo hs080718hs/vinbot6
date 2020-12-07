@@ -13,7 +13,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content.startswith("/출근"):
+    if message.content.startswith("/총관리자 출근"):
         try:
             # 메시지 관리 권한 있을시 사용가능
             if message.author.guild_permissions.manage_messages:
@@ -21,20 +21,46 @@ async def on_message(message):
                 embed = discord.Embed(color=0x80E12A)
                 channel = 781896362798219315
                 embed.set_author(name=author, icon_url=message.author.avatar_url)
-                embed.add_field(name='관리자 출근 알림', value='모든문의 주세요!')
+                embed.add_field(name='총관리자 출근했어욤!', value='모든문의 주세용!')
                 embed.set_image(url="https://cdn.discordapp.com/avatars/758473474129133589/a_4021bd6081f973db3e8051dd6f570978.png?size=128%22")
                 await client.get_channel(int(channel)).send(embed=embed)
         except:
             pass
 
-    if message.content.startswith("/퇴근"):
+    if message.content.startswith("/총관리자 퇴근"):
         try:
             if message.author.guild_permissions.manage_messages:
                 author = message.guild.get_member(int(message.author.id))
                 embed = discord.Embed(color=0xFF0000)
                 channel = 781896388719411211
                 embed.set_author(name=author, icon_url=message.author.avatar_url)
-                embed.add_field(name='관리자 퇴근 알림', value='문의들 못받습니다.')
+                embed.add_field(name='총관리자 퇴근할게욤!', value='문의들 못받습니당ㅠㅠ')
+                embed.set_image(url="https://cdn.discordapp.com/avatars/758473474129133589/a_4021bd6081f973db3e8051dd6f570978.png?size=128%22")
+                await client.get_channel(int(channel)).send(embed=embed)
+        except:
+            pass
+        
+            if message.content.startswith("/봇개발자 출근"):
+        try:
+            if message.author.guild_permissions.manage_messages:
+                author = message.guild.get_member(int(message.author.id))
+                embed = discord.Embed(color=0xFF0000)
+                channel = 781896388719411211
+                embed.set_author(name=author, icon_url=message.author.avatar_url)
+                embed.add_field(name='봇개발자 출근했어욤!', value='봇개발 문의 주세용!')
+                embed.set_image(url="https://cdn.discordapp.com/avatars/758473474129133589/a_4021bd6081f973db3e8051dd6f570978.png?size=128%22")
+                await client.get_channel(int(channel)).send(embed=embed)
+        except:
+            pass
+        
+                    if message.content.startswith("/봇개발자 퇴근"):
+        try:
+            if message.author.guild_permissions.manage_messages:
+                author = message.guild.get_member(int(message.author.id))
+                embed = discord.Embed(color=0xFF0000)
+                channel = 781896388719411211
+                embed.set_author(name=author, icon_url=message.author.avatar_url)
+                embed.add_field(name='봇개발자 퇴근했어욤!', value='문의들 못받습니당ㅠㅠ')
                 embed.set_image(url="https://cdn.discordapp.com/avatars/758473474129133589/a_4021bd6081f973db3e8051dd6f570978.png?size=128%22")
                 await client.get_channel(int(channel)).send(embed=embed)
         except:
